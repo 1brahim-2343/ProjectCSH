@@ -727,6 +727,8 @@ namespace Final.NetCore
                     {
                         currentEmployer.ShowAllVacancies();
                     }
+                    Console.WriteLine("Press anything to leav...");
+                    Console.ReadKey(true);
                     break;
                 case ConsoleKey.D3:
                     AddVacancy(currentEmployer);
