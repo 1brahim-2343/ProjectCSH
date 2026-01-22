@@ -12,6 +12,12 @@ namespace Final.NetCore
         {
         }
     }
+    public class EmployerNotFoundException : Exception
+    {
+        public EmployerNotFoundException(string phoneNo) : base($"Employer with phone number {phoneNo} was not found, make sure that there is no typo")
+        {
+        }
+    }
 
     public class TimingException : Exception
     {
@@ -25,4 +31,13 @@ namespace Final.NetCore
         {
         }
     }
+
+    public class EmptyList<T> : Exception where T : class, new()
+    {
+
+        public EmptyList(List<T> list) : base($"{nameof(list)} is empty")
+        {
+        }
+    }
+
 }

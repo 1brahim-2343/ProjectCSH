@@ -16,10 +16,19 @@ namespace Final.NetCore
             Console.WriteLine(input + " ↓");
             Console.WriteLine(fullWidthLine);
         }
+        public static void HalfWidthLine(this string input)
+        {
+            string fullWidthLine = new string('=', Console.WindowWidth/2);
+            Console.WriteLine(fullWidthLine);
+            Console.WriteLine(input + " ↓");
+            Console.WriteLine(fullWidthLine);
+        }
         public static bool IsValidAzerbaijaniPhone(this string phoneNo)
         {
             string pattern = @"^\+994(50|55|70|77|99|10)\d{7}$";
             return Regex.IsMatch(phoneNo, pattern);
         }
+
+        
     }
 }
